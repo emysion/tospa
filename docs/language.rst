@@ -2,7 +2,17 @@
 Grammar
 =======
 
-.. code-block:: wsl
+
+Intro
+=====
 
 
-   top = a | b;
+
+Grammar
+=======
+
+.. productionlist:: tospa
+   QUERY : "?-" `EXPR` .
+   EXPR : `RELATION` { "," `EXPR` }.
+   RELATION : `identifier` "(" `identifier` { "," `identifier` } ")".
+   identifier : "a" | ... | "z" | "A" | ... | "Z"
